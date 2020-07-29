@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Enable the proxy extension in notebook and lab
+jupyter serverextension enable --py jupyter_server_proxy
+jupyter labextension install @jupyterlab/server-proxy
+jupyter lab build
+
+julia <<__EOF__
+println("Hello!!!!!")
+__EOF__
